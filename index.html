@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="paige">
+        <header class="header">
+            <div class="header-container _container">
+                <div class="header-logo">
+                    <img src="img/logo.png" alt="">
+                </div>
+                <div class="header-menu">
+                    <ul>
+                        <li><a href="#">Как продать квартиру </a></li>
+                        <li><a href="#">Истории клиентов</a></li>
+                    </ul>
+                </div>
+                <div class="header-tel">
+                    <img src="img/Vector.png" alt="">
+                    <a href="tel:+380972213724">+380972213724</a>
+                </div>
+                <div class="header-button">
+                    <button id="submit">Перезвоните мне</button>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <div class="main-container _container">
+                <div class="main-about-flats">
+                    <div class="about-flats-info">
+                        <p>Запутались в сложных терминах и документах?</p>
+                        <h1>Узнайте, какие документы<br> подготовить и что учесть<br> 
+                            при продаже и покупке<br> квартиры</h1>
+                            <div class="about-flats-button">
+                            <a href="#">Хочу знать больше</a>
+                        </div>
+                    </div>
+                    <div class="about-flats-img">
+                        <img src="img/house.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="main-questions-img _container">
+                <img src="img/Иллюстрация-1.png" alt="sorry">
+                <img src="img/Иллюстрация-2.png" alt="sorry">
+                <img src="img/Иллюстрация-3.png" alt="sorry">
+            </div>
+            <div class="main-test _container">
+                <h2>Пройдите небольшой опрос и узнайте,<br> как  избежать рисков  при продаже или<br> покупке квартиры</h2>
+                <div class="main-test-block">
+                    <div class="block-first-part">
+                        <img src="img/Mask-Group-1.png" alt="">
+                    </div>
+                    <div class="main-test-text">
+                        <h3>Хочу безопасно и легко<br> продать или купить квартиру</h3>
+                        <div class="main-button-start">
+                        <button data-modal id="submit">Начать</button>
+                        </div>
+                        <div class="main-test-instructions">
+                            <div class="test-instructions-numbers">
+                            <p>После завершения опроса вы получите PDF<br> файл с содержащий:</p>
+                            <p>1. Список документов, необходимых в вашем<br> конкретном случае.</p>
+                            <p>2. Разъяснение сложных терминов<br> «на пальцах».</p>
+                            <p>3. Оценку возможных рисков.</p>
+                        </div>
+                        <img src="img/Стрелка.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-modal">
+                <div class="main-modal-container">
+                    <div class="main-modal-content">
+                    <div id="number" class="modal-question-number"></div>
+                    <div id ="title" class="modal-title">
+                       <h2 class="title">%title%</h2>
+                       <h3 class="message">%message%</h3>
+                       <p class="result">%result%</p>
+                    </div>    
+                    <ul class="quiz-question-items__answers" id="list">
+                <li>
+                    <label class="custom-radio">
+                        <input type="radio" name="answer" class="radio">
+                        <span class="fake"></span>
+                        <span class="text">Квартира приобреталась в браке</span>
+                    </label>
+                </li>
+                <li>
+                    <label class="custom-radio">
+                        <input type="radio" name="radio" class="radio">
+                        <span class="text">Квартира приобреталась и выплачивалась<br>
+                        не в браке</span>
+                    </label>
+                </li>
+                <li>
+                    <label class="custom-radio">
+                        <input type="radio" class="radio" name="answer">
+                        <span class="text">Ипотека выплачивалась в браке</span>
+                    </label>
+                </li>
+                <div class="out">
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                </div>
+            </ul>
+           
+            <div data-close class="modal__close">&times;</div>
+            <div class="next-question-button">
+                <button id="next" class="quiz-submit submit">Далее</button>
+            </div>
+                </div>
+        </div>
+            </div>
+            <div class="main-second-modal">
+                <div class="second-modal-container">
+                    <div class="second-modal-content">
+                        <div class="second-modal-close">&times;</div>
+                        <div class="second-modal-title">Мы свяжемся с вами как можно быстрее!</div>
+                        <input placeholder="Ваше имя" name="name" type="text" class="second-modal-input">
+                        <input placeholder="Ваш номер телефона" name="phone" type="phone" class="second-modal-input">
+                        <button class="btn btn_dark btn_min">Перезвонить мне</button>
+                    </div>
+                </div>
+            </div>
+            
+        </main>
+        <footer class="footer">
+            <div class="footer-container _container">
+                <div class="footer-logo">
+                    <img src="img/footer-logo.png" alt="">
+                </div>
+                <div class="footer-contact-info">
+                    <div class="footer-first-info">
+                        <img src="img/Vector-1.png" alt="">
+                        <p>г.Киев, ул.Грушевского 54</p>
+                    </div>
+                    <div class="footer-first-info">
+                        <img src="img/Vector-2.png" alt="">
+                        <p>+380965554421</p>
+                    </div>
+                </div>
+                <div class="footer-work-time">
+                    <div class="footer-first-info">
+                        <img src="img/Vector-3.png" alt="">
+                        <span>Режим работы</span>
+                    </div>
+                    <p>Пн. - Пт. - с 9:00 до 17:00</p>
+                    <p>Сб. - Вс. - с 9:00 до 17:00</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+
+    <script src="js/script.js"></script>
+</body>
+</html>
