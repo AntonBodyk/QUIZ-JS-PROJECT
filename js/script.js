@@ -6,10 +6,12 @@ const testStart = document.querySelectorAll('[data-modal]'),
 function openModal(){
     modal.classList.add('show');
     modal.classList.remove('hide');
+    document.body.style.overflow = 'hidden';
 }
 function closeModal(){
     modal.classList.add('hide');
     modal.classList.remove('show');
+    document.body.style.overflow = '';
 }
 testStart.forEach(btn =>{
     btn.addEventListener('click', openModal);
@@ -23,27 +25,41 @@ modal.addEventListener('click', (e) =>{
 const connect = document.querySelector('#submit'),
     secondModal = document.querySelector('.main-second-modal'),
     secondModalInput = document.querySelectorAll('.second-modal-input'),
-    closeSecondModal = document.querySelector('.second-modal-close'),
-    selectInfo = document.querySelector('.btn');
+    modalForm = document.querySelector('form'),
+    modalClose = document.querySelector('.second-modal-close'),
+    inputTel = document.querySelector('input[name="phone"]');
     
-function openSecondModal(){
-    secondModal.classList.add('active');
-    secondModal.classList.remove('hide');
-}
-connect.addEventListener('click', openSecondModal);
+    
+connect.addEventListener('click', () =>{
+     secondModal.style.display = 'block';
+     document.body.style.overflow = 'hidden';
+});
+modalForm.addEventListener('submit', (e) =>{
+    e.preventDefault();
+    if(secondModalInput === ''){
+        secondModal.style.display = 'block';
+        document.body.style.overflow = 'hidden';
+    }else{
+        secondModal.style.display = 'none';
+        document.body.style.overflow = '';
+        secondModalInput.forEach(inputs =>{
+            inputs.value = '';
+        });
+    }
+});
+modalClose.addEventListener('click', () =>{
+    secondModal.style.display = 'none';
+    document.body.style.overflow = '';
+    secondModalInput.forEach(inputs =>{
+        inputs.value = '';
+    });
+});
 
-closeSecondModal.addEventListener('click', () =>{
-    secondModal.classList.remove('active');
-    secondModalInput.forEach(items =>{
-        items.value = '';
-    });
+inputTel.addEventListener('input', () =>{
+    inputTel.value = inputTel.value.replace(/[^+\d]/g, '');
 });
-selectInfo.addEventListener('click', () =>{
-    secondModal.classList.remove('active');
-    secondModalInput.forEach(items =>{
-        items.value = '';
-    });
-});
+
+
 
 
 //----------------------QUESTIONS

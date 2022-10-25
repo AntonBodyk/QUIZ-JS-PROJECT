@@ -190,6 +190,9 @@
 .show{
     display: block;
 }
+.hide{
+    display: none;
+}
 .title{
     font-size: 25px;
     line-height: 45px;
